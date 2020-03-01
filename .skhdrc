@@ -86,3 +86,9 @@ shift + lctrl + alt - r :
 # Make window native fullscreen
 alt - f         : yabai -m window --toggle zoom-fullscreen
 shift + alt - f : yabai -m window --toggle native-fullscreen
+
+# toggle sticky(+float), topmost, border and picture-in-picture
+ctrl + alt - p : yabai -m window --toggle sticky;\
+          yabai -m window --toggle topmost;\
+          yabai -m window --toggle border;\
+          yabai -m window --toggle pip
