@@ -2,10 +2,10 @@
 
 # ====== Variables =============================
 
-gaps_top="60"
-gaps_bottom="20"
-gaps_left="20"
-gaps_right="20"
+gaps_top="70"
+gaps_bottom="10"
+gaps_left="10"
+gaps_right="10"
 gaps_inner="10"
 
 normal_border_color="010101"
