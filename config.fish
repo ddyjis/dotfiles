@@ -12,8 +12,3 @@ if status is-interactive
 and not set -q TMUX
     exec tmux
 end
-
-# Fish theme
-omf install bobthefish
-set -g theme_powerline_fonts yes
-set -g theme_nerd_fonts yes
