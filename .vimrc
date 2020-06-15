@@ -12,3 +12,5 @@ set showmatch           " highlight matching [{()}]
 
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
+
+set autoindent          " auto indent in new line
