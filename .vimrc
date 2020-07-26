@@ -28,3 +28,5 @@ Plug 'arcticicestudio/nord-vim'  " install nord-vim
 call plug#end()
 
 colorscheme nord        " set nord-vim theme
+
+start                   " start insert mode by default
