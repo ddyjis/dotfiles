@@ -22,6 +22,8 @@ set hlsearch            " highlight matches
 
 set autoindent          " auto indent in new line
 
+:imap jj <Esc>          " map jj to Escape key
+
 " load vim-plug plugins
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'arcticicestudio/nord-vim'  " install nord-vim
