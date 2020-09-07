@@ -8,3 +8,5 @@ if status is-interactive
 and not set -q TMUX
     exec tmux
 end
+
+thefuck --alias | source
