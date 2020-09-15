@@ -10,3 +10,6 @@ and not set -q TMUX
 end
 
 thefuck --alias | source
+
+# Add Go Path
+set PATH $PATH /Users/ddyjis/go/bin
