@@ -14,6 +14,11 @@ function fish_greeting
     echo -e "IT IS DANGEROUS TO GO ALONE! TAKE THIS. ✝"
 end
 
+
+# The next line updates PATH for the Google Cloud SDK.
+set PATH $PATH /Users/tonyli/google-cloud-sdk/bin
+set -g fish_user_paths "/usr/local/opt/openjdk@11/bin" $fish_user_paths
+
 function fish_prompt
     set -l triforce_color d4ce46
     set -l botw_tunic 38b6f1
