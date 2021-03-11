@@ -1,0 +1,16 @@
+# Display
+color info white default  # status bar
+color listfocus blue default reverse bold
+color listfocus_unread blue default reverse bold
+
+feedlist-format "%4i %n %11u %T %t"
+
+text-width 88
+
+# Navigation
+browser "open -g -a firefox %u"
+
+# Behaviour
+refresh-on-startup yes
+auto-reload yes
+reload-time 120

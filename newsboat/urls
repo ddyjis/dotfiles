@@ -1,0 +1,38 @@
+"query:Starred:flags # \"s\""
+
+# Entertainment
+http://xkcd.com/rss.xml "~xkcd" "(Site)"
+https://www.blogger.com/feeds/7818909121609196871/posts/default "~Pad Pad Blog" "(Blog)"
+https://rsshub.app/nintendo/eshop/hk "~任天堂香港新遊戲" "(Site)"
+https://rsshub.app/nintendo/direct "~Nintendo Direct" "(Site)"
+
+# Finance
+http://feeds2.feedburner.com/greenhornfinancefootnote "(Blog)"
+https://www.investcoo.com/feed/ "(Blog)"
+https://laxinvest.blogspot.com/feeds/posts/default "(Blog)"
+
+# Music
+https://wiwi.video/feeds/videos.xml?sort=-trending "(Video)"
+
+# News
+http://feeds.bbci.co.uk/news/world/rss.xml "(News)"
+http://rss.cbc.ca/lineup/topstories.xml "(News)"
+https://www.rfa.org/cantonese/news/rss2.xml "(News)" "~自由亞州電臺"
+https://feeds.a.dj.com/rss/RSSWorldNews.xml "(News)"
+https://www.thestandnews.com/rss/ "(News)"
+
+# Programming
+https://overreacted.io/rss.xml "(Blog)"
+https://static.mustread.tech/rss.xml "(Blog)"
+https://noob.tw/rss/ "(Blog)"
+
+# Technology
+http://feeds.feedburner.com/playpc "(Blog)"
+http://googleresearch.blogspot.com/atom.xml "(Blog)"
+http://feeds.macrumors.com/MacRumors-All "(Site)"
+https://news.ycombinator.com/rss "(Site)"
+
+# YouTube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw "(YouTube)" "~3Blue1Brown"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg "(YouTube)" "~Ali Abdaal"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCAM7yIYvZGYLJR6z6RqLlNw "(YouTube)" "~超級歪"
