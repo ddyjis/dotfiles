@@ -8,10 +8,13 @@ feedlist-format "%4i %n %11u %T %t"
 text-width 88
 
 # Navigation
-# browser "open -g -a firefox %u"
 browser "tmux split-window -h 'w3m %u'"
 
 # Behaviour
 refresh-on-startup yes
 auto-reload yes
 reload-time 120
+
+# Macro
+macro o set browser "open -g -a firefox %u"; open-in-browser; set browser "tmux split-window -h 'w3m %u'"
+
