@@ -6,7 +6,7 @@ function __conda_add_prompt; end
 # Auto-start Tmux
 if status is-interactive
 and not set -q TMUX
-    exec tmux attach -t 0 || tmux new
+    tmux has-session; and tmux a -t 0; or tmux new
 end
 
 # Fish welcome message
