@@ -8,7 +8,8 @@ feedlist-format "%4i %n %11u %T %t"
 text-width 88
 
 # Navigation
-browser "open -g -a firefox %u"
+# browser "open -g -a firefox %u"
+browser "tmux split-window -h 'w3m %u'"
 
 # Behaviour
 refresh-on-startup yes
