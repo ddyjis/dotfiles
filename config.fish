@@ -29,5 +29,5 @@ function fish_prompt
     set -g __fish_git_prompt_showstashstate true
     set_color $botw_tunic; echo "  " (prompt_pwd) (fish_git_prompt)
     set_color normal
-    set_color $triforce_color; echo -n " ✝ "
+    set_color $triforce_color; echo -n " ▲ "
 end

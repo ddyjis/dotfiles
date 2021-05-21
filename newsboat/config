@@ -3,7 +3,9 @@ color info white default  # status bar
 color listfocus blue default reverse bold
 color listfocus_unread blue default reverse bold
 
-feedlist-format "%4i %n %11u %T %t"
+feedlist-format "%4i %10T %n %11u %t"
+articlelist-format "%4i %f %D   %?T?|%-17T|  ?%t"
+datetime-format "%m-%d"
 
 text-width 88
 
@@ -14,7 +16,31 @@ browser "tmux split-window -h 'w3m %u'"
 refresh-on-startup yes
 auto-reload yes
 reload-time 120
+reload-threads 7
+
+# Highlights
+highlight all "Hong Kong|香港|Hongkonger" default default reverse
+highlight all "Canada|Toronto|Ontario|North York|加拿大|多倫多" white red
+highlight all "covid|coronavirus|新冠|武漢肺炎|武肺" black white
+highlight article "^(Title):.*$" red default
+highlight article "https?://[^ ]+" blue default
+highlight article "\\[image\\ [0-9]+\\]" green default
+highlight feedlist "=====.*=====" default default reverse
 
 # Macro
 macro o set browser "open -g -a firefox %u"; open-in-browser; set browser "tmux split-window -h 'w3m %u'"
+macro 1 set browser "open -g -a firefox %u"; one; set browser "tmux split-window -h 'w3m %u'"
+macro 2 set browser "open -g -a firefox %u"; two; set browser "tmux split-window -h 'w3m %u'"
+macro 3 set browser "open -g -a firefox %u"; three; set browser "tmux split-window -h 'w3m %u'"
+macro 4 set browser "open -g -a firefox %u"; four; set browser "tmux split-window -h 'w3m %u'"
+macro 5 set browser "open -g -a firefox %u"; five; set browser "tmux split-window -h 'w3m %u'"
+macro 6 set browser "open -g -a firefox %u"; six; set browser "tmux split-window -h 'w3m %u'"
+macro 7 set browser "open -g -a firefox %u"; seven; set browser "tmux split-window -h 'w3m %u'"
+macro 8 set browser "open -g -a firefox %u"; eight; set browser "tmux split-window -h 'w3m %u'"
+macro 9 set browser "open -g -a firefox %u"; nine; set browser "tmux split-window -h 'w3m %u'"
+macro 0 set browser "open -g -a firefox %u"; zero; set browser "tmux split-window -h 'w3m %u'"
 
+# Bindings
+unbind-key Q  # Prevent accidentally close the program
+unbind-key ^E
+bind-key f edit-flags

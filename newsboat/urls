@@ -1,24 +1,25 @@
 "query:Starred:flags # \"s\""
+"query:ReadItLater:flags # \"r\""
 
-# Entertainment
-http://xkcd.com/rss.xml "~xkcd" "(Site)"
-https://www.blogger.com/feeds/7818909121609196871/posts/default "~Pad Pad Blog" "(Blog)"
-https://rss-flax.vercel.app/lihkg "~LIHKG 熱門" "(Forum)"
-https://rsshub.app/nintendo/eshop/hk "~任天堂香港新遊戲" "(Site)"
-https://rsshub.app/nintendo/direct "~Nintendo Direct" "(Site)"
+=====Entertainment=====
+http://xkcd.com/rss.xml "~🎇xkcd" "(Site)"
+https://www.blogger.com/feeds/7818909121609196871/posts/default "~📱Pad Pad Blog" "(Blog)"
 
-# Finance
+=====Finance=====
+https://gooaye.com/feed/ "(Site)"
 http://feeds2.feedburner.com/greenhornfinancefootnote "(Blog)"
 https://www.investcoo.com/feed/ "(Blog)"
 https://laxinvest.blogspot.com/feeds/posts/default "(Blog)"
+https://canadiancouchpotato.com/feed/ "(Blog)"
+https://www.moneysense.ca/feed/ "(Blog)"
 
-# Living
+=====Living=====
 http://www.ttc.ca/RSS/Service_Alerts/index.rss "(Services)" "~TTC Service"
 
-# Music
+=====Music=====
 https://wiwi.video/feeds/videos.xml?sort=-trending "(Video)"
 
-# News
+=====News=====
 http://feeds.bbci.co.uk/news/world/rss.xml "(News)"
 http://rss.cbc.ca/lineup/topstories.xml "(News)"
 https://www.rfa.org/cantonese/news/rss2.xml "(News)" "~自由亞州電臺"
@@ -26,25 +27,28 @@ https://feeds.a.dj.com/rss/RSSWorldNews.xml "(News)"
 https://www.thestandnews.com/rss/ "(News)" "~立場新聞"
 https://www.cup.com.hk/feed/ "(News)"
 
-# Programming
+=====Programming=====
 https://overreacted.io/rss.xml "(Blog)" "~Overreacted"
 https://static.mustread.tech/rss.xml "(Blog)" "~MustRead.Tech"
 https://noob.tw/rss/ "(Blog)"
+https://stackoverflow.blog/feed/ "(Blog)"
 
-# Reddit
+=====Reddit=====
 https://www.reddit.com/r/BuyItForLife/.rss "(Reddit)" "~r/BuyItForLife"
 https://www.reddit.com/r/CanadianInvestor/.rss "(Reddit)" "~r/CanadianInvestor"
 https://www.reddit.com/r/PersonalFinanceCanada/.rss "(Reddit)" "~r/PersonalFinanceCanada"
+https://www.reddit.com/r/RingFitAdventure/.rss "(Reddit)" "~r/RingFitAdventure"
 https://www.reddit.com/r/toronto/.rss "(Reddit)" "~r/toronto"
 https://www.reddit.com/r/webdev/.rss "(Reddit)" "~r/webdev"
 
-# Technology
+=====Technology=====
 http://feeds.feedburner.com/playpc "(Blog)"
 http://googleresearch.blogspot.com/atom.xml "(Blog)"
+https://tldr.tech/rss "(Newsletter)"
 http://feeds.macrumors.com/MacRumors-All "(Site)"
 https://news.ycombinator.com/rss "(Site)"
 
-# YouTube
+=====YouTube=====
 https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw "(YouTube)" "~3Blue1Brown"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg "(YouTube)" "~Ali Abdaal"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCAM7yIYvZGYLJR6z6RqLlNw "(YouTube)" "~超級歪"
