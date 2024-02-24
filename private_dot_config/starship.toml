@@ -1,0 +1,65 @@
+'$schema' = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$rust\
+$golang\
+$python\
+$fill\
+$cmd_duration\
+$time\
+$line_break\
+$character
+"""
+
+aws.disabled = true
+gcloud.disabled = true
+
+[character]
+success_symbol = "[⌘](bold green)"
+error_symbol = "[⌘](bold red)"
+vimcmd_symbol = "[](bold green)"
+vimcmd_replace_one_symbol = "[](bold purple)"
+vimcmd_replace_symbol = "[](bold purple)"
+vimcmd_visual_symbol = "[](bold yellow)"
+
+[directory]
+format = '[ $path ]($style)'
+truncation_symbol = '... '
+
+[fill]
+symbol = " "
+
+[git_branch]
+symbol = ''
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+format = '[ $all_status$ahead_behind ]($style)'
+
+[nodejs]
+symbol = ''
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ''
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = ''
+format = '[ $symbol ($version) ]($style)'
+
+[php]
+symbol = ''
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = ''
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+format = '[ $time ]($style)'
