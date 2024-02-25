@@ -1,1 +1,25 @@
+# Homebrew
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# Set up starship
 eval "$(starship init zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh)"
+
+# Utilities
+function mkcd () {
+  mkdir -p -- "$1" && cd -P -- "$1"
+}
+
+# Aliases
+alias ..='cd ..'
+alias ~='cd ~'
+
+alias ls='eza'
+alias ll='eza -lbGF --git'
+alias lla='eza -lbGha --time-style=long-iso --git'
+
+alias dotfile='chezmoi'  # Because I can't remember this French word
+
+alias reload='source ~/.zshrc'
