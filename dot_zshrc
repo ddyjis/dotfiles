@@ -17,8 +17,8 @@ alias ..='cd ..'
 alias ~='cd ~'
 
 alias ls='eza'
-alias ll='eza -lbGF --git'
-alias lla='eza -lbGha --time-style=long-iso --git'
+alias ll='eza -lbF --git'
+alias lla='eza -lbha --time-style=long-iso --git'
 
 alias dotfile='chezmoi'  # Because I can't remember this French word
 
