@@ -1,9 +1,4 @@
 return {
-  -- session manager
-  {
-    "Shatur/neovim-session-manager",
-    lazy = false,
-  },
   -- quality of life
   {
     "windwp/nvim-autopairs",
