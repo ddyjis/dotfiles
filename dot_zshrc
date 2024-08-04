@@ -7,9 +7,6 @@ eval "$(starship init zsh)"
 # Zoxide
 eval "$(zoxide init zsh)"
 
-# Tmux
-if [ "$TMUX" = "" ]; then tmux; fi
-
 # Utilities
 function mkcd () {
   mkdir -p -- "$1" && cd -P -- "$1"
