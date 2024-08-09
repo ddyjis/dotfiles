@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "pyright", "tailwindcss" },
+				ensure_installed = { "lua_ls", "tsserver", "pyright", "tailwindcss", "black" },
 			})
 		end,
 	},
@@ -75,6 +75,7 @@ return {
 				sources = {
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.prettier,
+          null_ls.builtins.formatting.black,
 					require("none-ls.diagnostics.eslint_d"),
 					require("none-ls.code_actions.eslint"),
 				},
