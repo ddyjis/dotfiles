@@ -117,6 +117,7 @@ return {
 	-- dashboard
 	{
 		"nvimdev/dashboard-nvim",
+		lazy = false,
 		config = function()
 			-- Generated from https://patorjk.com/software/taag/#p=display&v=0&c=lua&f=ANSI%20Shadow&t=tony%20li
 			local logo = [[
@@ -148,6 +149,12 @@ return {
 							desc = "Find Text",
 							action = "Telescope live_grep",
 							icon = " ",
+						},
+						{
+							key = "s",
+							desc = "Restore Session",
+							action = 'lua require("persistence").load()',
+							icon = " ",
 						},
 						{
 							key = "c",
