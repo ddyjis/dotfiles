@@ -5,6 +5,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    event = "VimEnter",
     config = function()
       require("telescope").setup({
         defaults = {

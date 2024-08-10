@@ -117,7 +117,6 @@ return {
 	-- dashboard
 	{
 		"nvimdev/dashboard-nvim",
-		event = "VimEnter",
 		config = function()
 			-- Generated from https://patorjk.com/software/taag/#p=display&v=0&c=lua&f=ANSI%20Shadow&t=tony%20li
 			local logo = [[
@@ -133,8 +132,51 @@ return {
 			logo = string.rep("\n", 8) .. logo .. "\n\n"
 
 			require("dashboard").setup({
+				theme = "doom",
+				hide = { statusline = false },
 				config = {
 					header = vim.split(logo, "\n"),
+					center = {
+						{
+							key = "f",
+							desc = "Find File",
+							action = "Telescope find_files",
+							icon = " ",
+						},
+						{
+							key = "g",
+							desc = "Find Text",
+							action = "Telescope live_grep",
+							icon = " ",
+						},
+						{
+							key = "c",
+							desc = "Config",
+							action = "Telescope find_files cwd=~/.config/nvim",
+							icon = " ",
+						},
+						{
+							key = "r",
+							desc = "Recent Files",
+							action = "Telescope oldfiles",
+							icon = " ",
+						},
+						{
+							key = "q",
+							desc = "Quit",
+							action = function()
+								vim.api.nvim_input("<cmd>qa<cr>")
+							end,
+							icon = " ",
+						},
+					},
+					footer = function()
+						local stats = require("lazy").stats()
+						local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+						return {
+							"⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms",
+						}
+					end,
 				},
 			})
 		end,
