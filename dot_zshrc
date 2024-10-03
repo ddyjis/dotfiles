@@ -27,3 +27,11 @@ alias reload='source ~/.zshrc'
 # Created by `pipx` on 2024-08-09 04:03:48
 export PATH="$PATH:/Users/tonyli/.local/bin"
 
+
+# pnpm
+export PNPM_HOME="/Users/tonyli/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
