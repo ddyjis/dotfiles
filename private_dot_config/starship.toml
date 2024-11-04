@@ -9,6 +9,7 @@ $rust\
 $golang\
 $python\
 $fill\
+$status\
 $cmd_duration\
 $time\
 $line_break\
