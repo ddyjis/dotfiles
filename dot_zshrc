@@ -1,5 +1,6 @@
 # Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=1
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Set up starship
 eval "$(starship init zsh)"
