@@ -14,20 +14,17 @@ function mkcd () {
 }
 
 # Aliases
-alias ..='cd ..'
-alias ~='cd ~'
-
 alias ls='eza'
 alias ll='eza -lbF --git'
 alias lla='eza -lbha --time-style=long-iso --git'
 
-alias dotfile='chezmoi'  # Because I can't remember this French word
-
 alias reload='source ~/.zshrc'
+
+# Environment Variables
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Created by `pipx` on 2024-08-09 04:03:48
 export PATH="$PATH:/Users/tonyli/.local/bin"
-
 
 # pnpm
 export PNPM_HOME="/Users/tonyli/Library/pnpm"
@@ -36,3 +33,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
