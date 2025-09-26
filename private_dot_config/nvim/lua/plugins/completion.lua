@@ -1,7 +1,7 @@
 return {
   {
     "hrsh7th/nvim-cmp",
-    ---@param opts cmp.ConfigSche
+    ---@param opts cmp.ConfigSchema
     ---Use <tab> for completion and snippets
     opts = function(_, opts)
       local has_words_before = function()
