@@ -1,2 +1,8 @@
-theme = light:Gruvbox Light,dark:Gruvbox Dark
+# UI
+theme = Kanagawa Dragon
+quick-terminal-position = center
+quick-terminal-size = 70%,70%
+
+# Key bindings
+keybind = global:cmd+backquote=toggle_quick_terminal
 
