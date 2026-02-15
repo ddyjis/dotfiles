@@ -26,3 +26,16 @@ alias reload='source ~/.zshrc'
 # Environment Variables
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# vllm
+export PATH="/Users/ddyjis/.venv-vllm-metal/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/ddyjis/.antigravity/antigravity/bin:$PATH"
+
+# Override stock bison with homebrew bison
+export PATH="/opt/homebrew/opt/bison/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/ddyjis/.lmstudio/bin"
+# End of LM Studio CLI section
+
