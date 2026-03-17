@@ -1,7 +1,17 @@
 # UI
 theme = Kanagawa Dragon
 quick-terminal-position = center
-quick-terminal-size = 70%,70%
+quick-terminal-size = 1280px,720px
+
+font-family = "Lilex Nerd Font Mono"
+font-family = "Sarasa Gothic TC"
+font-size = 14
+
+# Settings
+initial-window = false
+
+# Prerelease builds
+auto-update-channel = tip
 
 # Key bindings
 keybind = global:cmd+backquote=toggle_quick_terminal
