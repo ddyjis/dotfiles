@@ -1,7 +1,3 @@
-# Homebrew
-export HOMEBREW_NO_AUTO_UPDATE=1
-export PATH="/opt/homebrew/bin:$PATH"
-
 # Set up starship
 eval "$(starship init zsh)"
 
@@ -26,16 +22,64 @@ alias reload='source ~/.zshrc'
 # Environment Variables
 export XDG_CONFIG_HOME="$HOME/.config"
 
-# vllm
-export PATH="/Users/ddyjis/.venv-vllm-metal/bin:$PATH"
+# Warn if .zprofile modifies PATH
+if grep -qE '^\s*(export PATH|path\+=|path=\()' ~/.zprofile 2>/dev/null; then
+    echo "warning: ~/.zprofile contains PATH modifications — consider moving them to .zshrc"
+fi
+
+# Helper to safely add to PATH
+# Usage: add_path /some/dir          # prepend (default, higher priority)
+#        add_path /some/dir append   # append (lower priority)
+add_path() {
+    local dir="$1"
+    local mode="${2:-prepend}"
+
+    [[ -d "$dir" ]] || return  # skip if directory doesn't exist
+
+    # skip if already in PATH
+    [[ ":$PATH:" == *":$dir:"* ]] && return
+
+    if [[ "$mode" == "append" ]]; then
+        export PATH="$PATH:$dir"
+    else
+        export PATH="$dir:$PATH"
+    fi
+}
+
+# Homebrew
+export HOMEBREW_NO_AUTO_UPDATE=1
+add_path "/opt/homebrew/bin"
 
 # Added by Antigravity
-export PATH="/Users/ddyjis/.antigravity/antigravity/bin:$PATH"
+add_path "/Users/ddyjis/.antigravity/antigravity/bin"
 
 # Override stock bison with homebrew bison
-export PATH="/opt/homebrew/opt/bison/bin:$PATH"
+add_path "/opt/homebrew/opt/bison/bin"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/ddyjis/.lmstudio/bin"
+add_path "/Users/ddyjis/.lmstudio/bin" append
 # End of LM Studio CLI section
 
+# amp CLI
+add_path "$HOME/.local/bin"
+
+# pnpm
+export PNPM_HOME="/Users/ddyjis/Library/pnpm"
+add_path "$PNPM_HOME"
+# pnpm end
+
+# Added by Obsidian
+add_path "/Applications/Obsidian.app/Contents/MacOS" append
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ddyjis/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ddyjis/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ddyjis/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ddyjis/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# bun completions
+[ -s "/Users/ddyjis/.bun/_bun" ] && source "/Users/ddyjis/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+add_path "$BUN_INSTALL/bin"
