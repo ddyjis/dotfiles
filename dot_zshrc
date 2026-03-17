@@ -77,6 +77,12 @@ if [ -f '/Users/ddyjis/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/User
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ddyjis/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ddyjis/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
+# Sandbox shortcuts — run agents inside ~/.config/sandbox-exec/agent.sb
+sandbox-claude() { ~/.config/sandbox-exec/run-sandboxed.sh claude "$@"; }
+sandbox-amp()    { ~/.config/sandbox-exec/run-sandboxed.sh amp    "$@"; }
+sandbox-codex()  { ~/.config/sandbox-exec/run-sandboxed.sh codex  "$@"; }
+sandbox-gemini() { ~/.config/sandbox-exec/run-sandboxed.sh gemini "$@"; }
+
 # bun completions
 [ -s "/Users/ddyjis/.bun/_bun" ] && source "/Users/ddyjis/.bun/_bun"
 
