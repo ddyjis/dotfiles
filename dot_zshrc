@@ -53,28 +53,7 @@ add_path() {
 
 # Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=1
-add_path "/opt/homebrew/bin"
 
-# Added by Antigravity
-add_path "/Users/ddyjis/.antigravity/antigravity/bin"
-
-# Override stock bison with homebrew bison
-add_path "/opt/homebrew/opt/bison/bin"
-
-# Added by LM Studio CLI (lms)
-add_path "/Users/ddyjis/.lmstudio/bin" append
-# End of LM Studio CLI section
-
-# amp CLI
-add_path "$HOME/.local/bin"
-
-# pnpm
-export PNPM_HOME="/Users/ddyjis/Library/pnpm"
-add_path "$PNPM_HOME"
-# pnpm end
-
-# Added by Obsidian
-add_path "/Applications/Obsidian.app/Contents/MacOS" append
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ddyjis/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ddyjis/Downloads/google-cloud-sdk/path.zsh.inc'; fi
@@ -89,3 +68,12 @@ if [ -f '/Users/ddyjis/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 add_path "$BUN_INSTALL/bin"
+
+export PNPM_HOME="/Users/ddyjis/Library/pnpm"
+
+add_path "/opt/homebrew/bin"
+add_path "/opt/homebrew/opt/bison/bin"
+add_path "$HOME/.local/bin"
+add_path "$PNPM_HOME"
+add_path "/Users/ddyjis/.lmstudio/bin"
+add_path "/Applications/Obsidian.app/Contents/MacOS"
