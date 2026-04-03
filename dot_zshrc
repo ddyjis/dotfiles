@@ -22,6 +22,11 @@ alias reload='source ~/.zshrc'
 # Environment Variables
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# Auto attach to TMUX
+if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t main || tmux new-session -s main
+fi
+
 # Warn if .zprofile modifies PATH
 if grep -qE '^\s*(export PATH|path\+=|path=\()' ~/.zprofile 2>/dev/null; then
     echo "warning: ~/.zprofile contains PATH modifications — consider moving them to .zshrc"
