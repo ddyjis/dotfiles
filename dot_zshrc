@@ -19,6 +19,9 @@ alias lla='eza -lbha --time-style=long-iso --git'
 
 alias reload='source ~/.zshrc'
 
+alias claude-tg='/Users/ddyjis/.local/bin/claude --channels plugin:telegram@claude-plugins-official'
+alias pensieve='cd /Users/ddyjis/pensieve/ && claude'
+
 # Environment Variables
 export XDG_CONFIG_HOME="$HOME/.config"
 
@@ -54,6 +57,8 @@ add_path() {
 # Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# Claude Code
+export CLAUDE_CODE_NO_FLICKER=1
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ddyjis/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ddyjis/Downloads/google-cloud-sdk/path.zsh.inc'; fi
