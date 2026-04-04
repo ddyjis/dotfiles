@@ -1,8 +1,12 @@
 return {
-  { "rebelot/kanagawa.nvim" },
+  {
+    "webhooked/kanso.nvim",
+    lazy = false,
+    priority = 1000,
+  },
   {
     "LazyVim/LazyVim",
-    opts = { colorscheme = "kanagawa" },
+    opts = { colorscheme = "kanso-zen" },
   },
   {
     "folke/snacks.nvim",
