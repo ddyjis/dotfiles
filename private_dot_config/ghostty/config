@@ -1,7 +1,7 @@
 # UI
-theme = Kanagawa Dragon
+theme = dark:kanso-zen,light:kanso-pearl
 quick-terminal-position = center
-quick-terminal-size = 1280px,720px
+quick-terminal-size = 100%, 100%
 
 font-family = "Lilex Nerd Font Mono"
 font-family = "Sarasa Gothic TC"
