@@ -9,6 +9,20 @@ return {
     opts = { colorscheme = "kanso-zen" },
   },
   {
+    "afonsofrancof/OSC11.nvim",
+    opts = {
+      -- Function to call when switching to dark theme
+      on_dark = function()
+        vim.opt.background = "dark"
+        vim.cmd("colorscheme kanso-zen")
+      end,
+      -- Function to call when switching to light theme
+      on_light = function()
+        vim.cmd("colorscheme kanso-pearl")
+      end,
+    },
+  },
+  {
     "folke/snacks.nvim",
     ---@type snacks.Config
     opts = {
